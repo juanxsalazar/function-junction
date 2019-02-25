@@ -39,7 +39,7 @@ const maxOfThree = (x, y, z) => {
 
 // ...
 
-const sum (x,y) => {
+const sum = (x, y) => {
   return x + y
 }
 

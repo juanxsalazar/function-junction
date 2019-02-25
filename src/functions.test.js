@@ -6,12 +6,31 @@
 
 // ...
 
+const max = (x,y) => {
+  if (x > y) {
+    return x
+  } else {
+    return y
+  }
+  }
+
 /**
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
 
 // ...
+
+const maxOfThree = (x, y, z) => {
+  if (x > y && x > z) {
+    return x
+  } else if (x < y && y > z) {
+    return y
+  } else if (x < z && y < z) {
+    return z
+  }
+}
+
 
 /*
  * Define a function sum() that takes two numbers as
@@ -20,12 +39,25 @@
 
 // ...
 
+const sum (x,y) => {
+  return x + y
+}
+
 /*
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
 
 // ...
+const sumOfArray = (array) => {
+  let total = 0
+  array.forEach(number => {
+    total += number
+  })
+  return total
+}
+
+
 
 /**
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
@@ -33,6 +65,11 @@
  */
 
 // ...
+
+const isVowel = letter => {
+  const vowel = ['a', 'e', 'i', 'o', 'u']
+  return vowel.includes(letter.toLowerCase())
+}
 
 /**
  * Write a function rovarspraket() that will translate
@@ -45,6 +82,8 @@
 
 // ...
 
+// confused about the wording on this one...
+
 /**
  * Define a function reverse() that computes
  * the reversal of a string. For example,
@@ -54,6 +93,10 @@
 
 // ...
 
+const reverse = (string) => {
+  return string.split('').reverse().join('')}
+
+
 /**
  * Write a function findLongestWord() that takes an
  * string returns the first, longest word in the array.
@@ -62,6 +105,18 @@
  */
 
 // ...
+
+let findLongestWord = words => {
+  let wordArray = words.split(' ')
+  let longestString = ''
+  for (let i = 0; i <wordArray.length; i++) {
+    if (longestString.length < wordArray[i].length){
+      longestString = wordArray[i]
+    }
+  }
+}
+
+
 
 /**
  * NOTE: Don't modify anything below this line...
